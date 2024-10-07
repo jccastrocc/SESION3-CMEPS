@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 class CuentaTest {
 	
 	private static Cuenta cuenta;
+	
+	
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -23,7 +25,8 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		cuenta = new Cuenta(0d);
+		cuenta = new Cuenta(0d, "numero de cuenta", "Juan");
+		//cuenta = new Cuenta(0d);
 	}
 
 	@AfterEach
