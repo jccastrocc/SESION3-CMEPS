@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import es.uhu.sesion3.Calculadora;
+
 class CalculadoresTest {
 
 	@BeforeAll
@@ -32,10 +34,8 @@ class CalculadoresTest {
 		fail("Not yet implemented");
 	}
 	
+	@Test
 	void testSuma() {
-		
-		//int float
-		
 		
 		assertEquals(5,Calculadora.suma(3,2));
 	}
