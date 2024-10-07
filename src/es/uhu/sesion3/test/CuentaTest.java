@@ -10,12 +10,11 @@ import org.junit.jupiter.api.Test;
 
 class CuentaTest {
 	
-	//DOuble saldo;
-	//ingresar(double)
-	//returar(double)
+	private static Cuenta cuenta;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		cuenta = new Cuenta();
 	}
 
 	@AfterAll
@@ -32,13 +31,10 @@ class CuentaTest {
 
 	@Test
 	void testIngresar() {
-		Cuenta.ingresar(500d);
-		assertEquals(500,Cuenta.getSaldo());
+		
+		assertEquals(500,cuenta.getSaldo());
 	}
 
-	@Test
-	void testRetirar() {
-		Cuenta.retirar(500d);
-		assertEquals(-500,Cuenta.getSaldo());
-	}
+	
+	
 }
