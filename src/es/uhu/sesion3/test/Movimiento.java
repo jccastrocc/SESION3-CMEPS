@@ -1,7 +1,7 @@
 package es.uhu.sesion3.test;
 
 public class Movimiento {
-	public enum Signo{D, H};
+	public enum Signo{INGRESO, RETIRO};
 	Signo signo;
 	Double importe;
 	String detalle;
