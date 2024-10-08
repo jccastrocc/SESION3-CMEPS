@@ -18,7 +18,7 @@ public class Cuenta {
 		this.numero = numero;
 		this.titular = titular;
 		this.movimientos = new ArrayList<>();
-	}
+		}
 	
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
@@ -45,6 +45,7 @@ public class Cuenta {
 	public  void retirar(double importe) throws Exception {
 		
 		if(saldo-importe<-500) {
+			
 			throw new Exception("No hay fondos suficientes");
 		}
 		
@@ -55,6 +56,7 @@ public class Cuenta {
 		
 		movimientos.add(new Movimiento(Signo.RETIRO,importe, detalle));
 		this.saldo-=importe;
+		this.getSaldo();
 	}
 
 	
