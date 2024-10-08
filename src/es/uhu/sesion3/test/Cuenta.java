@@ -2,7 +2,6 @@ package es.uhu.sesion3.test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import es.uhu.sesion3.test.Movimiento.Signo;
 
@@ -32,25 +31,30 @@ public class Cuenta {
 	}
 
 	public  void ingresar(double d) {
-		String detalle;
-		Scanner sc = new Scanner(System.in);
+		String detalle="";
+		//Scanner sc = new Scanner(System.in);
 		
-		detalle = sc.nextLine();
+		//detalle = //sc.nextLine();
 		
-		movimientos.add(new Movimiento(Signo.D,d, detalle));
+		movimientos.add(new Movimiento(Signo.INGRESO,d, detalle));
 		this.saldo+=d;
 		
 	}
 
 
-	public  void retirar(double d) {
-		String detalle;
-		Scanner sc = new Scanner(System.in);
+	public  void retirar(double importe) throws Exception {
 		
-		detalle = sc.nextLine();
+		if(saldo-importe<-500) {
+			throw new Exception("No hay fondos suficientes");
+		}
 		
-		movimientos.add(new Movimiento(Signo.H,d, detalle));
-		this.saldo-=d;
+		String detalle="";
+		//Scanner sc = new Scanner(System.in);
+		
+		//detalle = sc.nextLine();
+		
+		movimientos.add(new Movimiento(Signo.RETIRO,importe, detalle));
+		this.saldo-=importe;
 	}
 
 	
