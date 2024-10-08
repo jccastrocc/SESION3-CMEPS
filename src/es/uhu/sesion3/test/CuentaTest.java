@@ -11,12 +11,17 @@ import org.junit.jupiter.api.Test;
 
 class CuentaTest {
 	
-	private static Cuenta cuenta;
+	private static Cuenta cuenta12345;
+	private static Cuenta cuenta67890;
 	
 	
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+		cuenta12345 = new Cuenta(50d, "12345", "Juan");
+		cuenta67890 = new Cuenta(0d,"67890","Pedro");
+		
+		
 		
 	}
 
@@ -26,7 +31,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		cuenta = new Cuenta(0d, "numero de cuenta", "Juan");
+		
 		
 	}
 
